@@ -1,4 +1,4 @@
-package org.as3wavsound {
+﻿package org.as3wavsound {
 	import flash.events.SampleDataEvent;
 	import flash.media.Sound;
 	import flash.media.SoundChannel;
@@ -128,6 +128,10 @@ package org.as3wavsound {
 		 */
 		public function play(startTime:Number = 0, loops:int = 0, sndTransform:SoundTransform = null): WavSoundChannel {
 			return player.play(this, startTime, loops, sndTransform);
+		}
+		
+		public function stop(channel:WavSoundChannel): void {
+			player.stop(channel);
 		}
 		
 		/**
